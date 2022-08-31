@@ -10,3 +10,5 @@ Display current directory contents
  script that creates a directory named my_first_directory in the /tmp/ directory
  Move the file betty from /tmp/ to /tmp/my_first_directory
  delete the file betty
+ delete the directory my_first_directory\
+ command that change to previous directory
