@@ -2,3 +2,4 @@
 2.script that shows the user.
 3.script that shows the groups.
 4..script thhat changes to the new user.
+5.scrpit that create empty file called hello.
