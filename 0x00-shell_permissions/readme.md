@@ -1,1 +1,1 @@
-1.script that changes to the user betty
+1.script that changes to betty user.
