@@ -6,3 +6,4 @@
 6.script that add execute permission to the owner of the file.
 7.script that add execute permission to the group and read permision to other users.
 8.script that add execute permission to all.
+9.script that gives no permission to user and group but all permission to other users.
