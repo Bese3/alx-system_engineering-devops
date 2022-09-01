@@ -20,3 +20,4 @@
 
 11.script that mirror permissions.
 12. script for directory permissions.
+13.script for specific directory creation.`
