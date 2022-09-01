@@ -8,3 +8,4 @@
 8.script that add execute permission to all.
 9.script that gives no permission to user and group but all permission to other users.
 10 script that add given permission.
+11.script that mirror permissions.
