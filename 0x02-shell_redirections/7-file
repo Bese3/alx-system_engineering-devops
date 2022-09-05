@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e 'Best School\n rerb  '> '\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)'
+echo  "Best School" | cat > '\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)'
