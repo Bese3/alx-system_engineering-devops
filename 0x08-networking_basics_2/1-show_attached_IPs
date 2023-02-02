@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Shows all active IPv4 IPs on the machine it’s executed on.
+
+# shellcheck disable=SC1083
+ifconfig | grep 'inet ' | awk {'print $2'}

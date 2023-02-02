@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Manages the process created by program `manage_my_process`
+
+if [ "$1" == "start" ] && [ $# == 1 ]; then
+  ./manage_my_process &
+  pgrep -f manage_my_process | tail -1 | sudo tee /var/run/my_process.pid > /dev/null
+  echo "manage_my_process started"
+
+elif [ "$1" == "stop" ] && [ $# == 1 ]; then
+  pid=$(cat /var/run/my_process.pid)
+  sudo kill -9 "$pid"
+  rm /var/run/my_process.pid
+  echo "manage_my_process stopped"
+  exit
+
+elif [ "$1" == "restart" ] && [ $# == 1 ]; then
+  pid=$(cat /var/run/my_process.pid)
+  sudo kill -9 "$pid"
+  rm /var/run/my_process.pid
+  ./manage_my_process &
+  pgrep -f manage_my_process | tail -1 | sudo tee /var/run/my_process.pid > /dev/null
+  echo "manage_my_process restarted"
+
+else echo "sage: manage_my_process {start|stop|restart}"
+
+fi

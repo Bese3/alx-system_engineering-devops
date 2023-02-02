@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays `To infinity and beyond` indefinitely
+
+i=1
+while [ $i == 1 ]; do
+    echo "To infinity and beyond"
+    sleep 2
+    trap 9 EXIT
+done

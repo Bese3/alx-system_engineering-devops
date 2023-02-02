@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Prints the contents of /etc/passwd stylized
+
+# The internal field separator is set to ':' to separate the fields in
+# /etc/passwd
+IFS=:
+
+# read reads each line from /etc/passwd and extracts all the fields
+# (delimited by IFS) to their corresponding variables. All fields are printed
+# with a bit of their description using echo
+while  read -r username password uid group_id uid_info home_dir cmd_shell;
+ do
+  echo -n "The user $username is part of the $group_id gang, lives in $home_dir "
+  echo -n "and rides $cmd_shell. $uid's place is protected by the passcode "
+  echo "$password, more info about the user here: $uid_info"
+done < "/etc/passwd"
