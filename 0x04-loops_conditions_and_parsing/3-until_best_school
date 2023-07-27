@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# printing "Best School" using until condition
+
+
+i=0
+until [ $i == 10 ]
+do
+echo "Best School"
+((i++))
+done
