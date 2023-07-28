@@ -7,3 +7,4 @@ while [ $i == 1 ]; do
     sleep 2
     trap 9 EXIT
 done
+
