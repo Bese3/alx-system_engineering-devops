@@ -4,12 +4,12 @@
 hours=0
 min=1
 
-while [ $hours -le 12 ]; do
+while [ $hours -le 11 ]; do
 	echo "Hour: $i"
 	while [ $min -le 59 ]; do
 		echo $min
-		j=$((j+1))
+		((min++))
 	done
-	min=$((1))
-	hours=$((i+1))
+	min=1
+	((hours++))	
 done
