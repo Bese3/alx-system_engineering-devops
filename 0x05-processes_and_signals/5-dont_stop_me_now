@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Kills the `4-to_infinity_and_beyond` process initiated in another terminal
+# Kills the process even if lots of other bash processes were created after
+# it since this script greps the PID by the file's name
+
+pid=$(pgrep -f 4-to_infinity_and_beyond)
+kill "$pid"
+# Make sure process is terminated by passing SIGINT
+kill -9 "$pid"
