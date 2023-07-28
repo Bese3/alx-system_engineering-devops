@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
-# displaying hours and minutes
+# Prints every minute and hour from 1-59 and 1-12, respectively
 
-hours=0
-min=1
-echo "Hour: $hours"
-while [ $hours -le 11 ]
+hr=0
+minute=1
+
+while [ $hr -le 12 ]
 do
-echo "$min"
-if [ $min == 59 ]; then
-((hours++))
-echo "Hour: $hours"
-min=0
-fi
-((min++))
+  echo "Hour: $hr"
+
+  while [ $minute -le 59 ]
+  do
+    echo $minute
+    ((minute = minute + 1))
+  done
+
+  minute=1
+  ((hr++))
 done
