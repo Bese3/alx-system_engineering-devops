@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# loging into myserver using `~/.ssh/school/` file
+ssh -i ~/.ssh/school ubuntu@3.95.32.52
+
