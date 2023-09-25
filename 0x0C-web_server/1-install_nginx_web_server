@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# installing nginx in my server
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo sed -i 's/listen [[:digit:]]\{2,\} default_server/listen 80 default_server/' /etc/nginx/sites-enabled/default
+sudo sed -i 's/listen \[::\]:[[:digit:]]\{2,\} default_server/listen 80 default_server/' /etc/nginx/sites-enabled/default
+sudo sed -i 's/listen [[:digit:]]\{2,\} default_server/listen 80 default_server/' /etc/nginx/sites-enabled/default
+sudosed -i 's/listen \[::\]:[[:digit:]]\{2,\} default_server/listen 80 default_server/' /etc/nginx/sites-enabled/default
+sudo service restart nginx
+
