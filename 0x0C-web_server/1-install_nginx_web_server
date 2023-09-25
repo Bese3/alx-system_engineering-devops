@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # installing nginx in my server
-sudo apt-get update
-sudo apt-get install nginx -y
+sudo apt update
+sudo apt install nginx -y
 sudo ufw allow 'Nginx HTTP'
 sudo ufw allow 'Nginx HTTPS'
 sudo ufw allow 'Nginx Full
