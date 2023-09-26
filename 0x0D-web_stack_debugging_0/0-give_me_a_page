@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# debungging my first docker web
+sudo service apache2 start
+
