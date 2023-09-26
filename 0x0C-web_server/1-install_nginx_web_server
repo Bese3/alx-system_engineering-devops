@@ -6,9 +6,9 @@ sudo ufw allow 'Nginx HTTP'
 sudo ufw allow 'Nginx HTTPS'
 sudo ufw allow 'Nginx Full
 sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sed -i 's/listen [[:digit:]]\{2,\} default_server/listen 80 default_server/' /etc/nginx/sites-enabled/default
-sed -i 's/listen \[::\]:[[:digit:]]\{2,\} default_server/listen [::]:80 default_server/' /etc/nginx/sites-enabled/default
-sed -i 's/listen [[:digit:]]\{2,\} default_server/listen 80 default_server/' /etc/nginx/sites-enabled/default
-sed -i 's/listen \[::\]:[[:digit:]]\{2,\} default_server/listen [::]:80 default_server/' /etc/nginx/sites-enabled/default
-sudo service restart nginx
+sed -i 's/\tlisten [0-9].* default_server/\tlisten 80 default_server/' /etc/nginx/sites-enabled/default
+sed -i 's/\tlisten \[::\]:[0-9].* default_server/\tlisten [::]:80 default_server/' /etc/nginx/sites-enabled/default
+sed -i 's/\tlisten [0-9].* default_server/\tlisten 80 default_server/' /etc/nginx/sites-enabled/default
+sed -i 's/\tlisten \[::\]:[0-9].* default_server/\tlisten [::]:80 default_server/' /etc/nginx/sites-enabled/default
+sudo service nginx restart
 
