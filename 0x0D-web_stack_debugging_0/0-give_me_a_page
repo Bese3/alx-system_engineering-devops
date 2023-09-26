@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# debungging my first docker web
+# debugging 0 of web servers
 sudo service apache2 start
 
