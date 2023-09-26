@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# configing 404 error file
+./3-redirection
+sudo touch /var/www/html/error_page.html
+sudo echo "Ceci n'est pas une page" > /var/www/html/error_page.html
+new_page="\tserver_name _;\n\terror_page 404 \/error_page.html;"
+sudo sed -i "s/\tserver_name _;/$new_page/" /etc/nginx/sites-available/default
+sudo sed -i "s/\tserver_name _;/$new_page/" /etc/nginx/sites-available/default
+sudo service nginx restart
