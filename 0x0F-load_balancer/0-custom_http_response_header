@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Configing the second web server to be identical as web-1
+# including `X-Served-By` header to differentiate servers
+git clone https://github.com/bese3/alx-system_engineering-devops
+cd alx-system_engineering-devops/0x0C-web_server
+./1-install_nginx_web_server
+./3-redirection
+./4-not_found_page_404
+sed -i "s/\tserver_name _;/\tserver_name _;\n\tadd_header X-Served-By $(hostname)/" etc/nginx/sites-available/default
+sed -i "s/\tserver_name _;/\tserver_name _;\n\tadd_header X-Served-By $(hostname)/" etc/nginx/sites-enabled/default
+
