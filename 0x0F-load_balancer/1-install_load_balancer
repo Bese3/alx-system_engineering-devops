@@ -4,6 +4,8 @@ sudo apt update
 sudo apt-get install -y haproxy
 
 cd /
+chmod a+w etc/default/haproxy
+chmod a+w etc/haproxy/haproxy.cfg
 sudo echo "ENALBED=1" | tee -a "/etc/default/haproxy"
 sudo printf "\nlisten www\n\tbind :80\n\tmode http\n\tstats enable\n\tstats uri /haproxy?status\n\tbalance roundrobin\n\tserver 123459-web-01 54.90.60.221:80 check\n\tserver 123459-web-02 52.201.220.122:80 check\n" | tee -a etc/haproxy/haproxy.cfg
 sudo service haproxy start
