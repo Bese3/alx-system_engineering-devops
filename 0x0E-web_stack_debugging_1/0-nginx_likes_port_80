@@ -1,7 +1,5 @@
-#!/usr/bin/env bash
-# a Bash script that configures a server and listening on port 80 of all the server’s active IPv4 IPs
-sudo apt update
+#!/usr/bin/nev/ bash
+# a bash script that configs to listen nginx on port 80
+suod apt update
 sudo apt-get install -y nginx
-
-sudo service nginx restart
-
+sudo service ngnx restart
