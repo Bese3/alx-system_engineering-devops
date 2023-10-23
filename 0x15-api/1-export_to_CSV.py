@@ -24,7 +24,7 @@ if __name__ == '__main__':
             if i['completed'] is True:
                 task_completed += 1
         with open(str(argv[1]) + ".csv", "w", encoding="utf-8") as csv_file:
-            csv_writer = csv.writer(csv_file)
+            csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
             for i in response:
                 line = [argv[1], name, i['completed'], i['title']]
                 csv_writer.writerow(line)
