@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """reading api from third party"""
-from sys import argv
 import requests
+from sys import argv
 
 """
 The code block starting with `if __name__ == '__main__':`
