@@ -26,5 +26,5 @@ if __name__ == '__main__':
         with open(str(argv[1]) + ".csv", "w", encoding="utf-8") as csv_file:
             csv_writer = csv.writer(csv_file)
             for i in response:
-                line = [i['id'], name, i['completed'], i['title']]
+                line = [argv[1], name, i['completed'], i['title']]
                 csv_writer.writerow(line)
