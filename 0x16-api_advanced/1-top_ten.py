@@ -20,9 +20,11 @@ def top_ten(subreddit):
     url = F"https://www.reddit.com/r/{subreddit}/hot.json"
     with requests.get(url, headers=headers, params={'limit': 10}) as response:
         if response.status_code >= 400:
-            return 0
+            print(None)
+            return
         posts = response.json()["data"]["children"]
         if posts is None or posts[0]['kind'] != 't3':
             print(None)
+            return
         for i in posts:
             print(i['data']['title'])
