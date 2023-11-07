@@ -21,7 +21,6 @@ def recurse(subreddit, hot_list=[], after=None):
     with requests.get(url, headers=headers,
                       params={'after': after}) as response:
         if response.status_code >= 400:
-            print(None)
             return
         after = response.json()['data']['after']
         posts = response.json()["data"]["children"]
